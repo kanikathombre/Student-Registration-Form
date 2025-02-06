@@ -10,7 +10,7 @@ This is a simple **Student Registration Form** created using **HTML** only. The 
 - Simple and **easy-to-understand** design with no external CSS or JavaScript.
 
 ## 🛠️ Technologies Used
-- **HTML5** (No CSS or JavaScript)
+- **HTML** (No CSS or JavaScript)
   
 ## 📸 Screenshot
 ![image](https://github.com/user-attachments/assets/4127ef0e-ee0b-4bf9-800d-055fcbef5383)
