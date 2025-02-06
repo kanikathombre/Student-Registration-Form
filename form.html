@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <h2 align="center">STUDENT REGISTRATION FORM</h2>
+    <form>
+        <table align="center" cellpadding="10">
+            <!-- Name Section -->
+            <tr>
+                <td>FIRST NAME</td>
+                <td><input type="text" name="first_name" maxlength="30">
+                (max 30 characters a-z and A-Z)</td>
+            </tr>
+            <tr>
+                <td>MIDDLE NAME</td>
+                <td><input type="text" name="middle_name" maxlength="30">
+                (max 30 characters a-z and A-Z)</td>
+            </tr>
+            <tr>
+                <td>LAST NAME</td>
+                <td><input type="text" name="last_name" maxlength="30">
+                (max 30 characters a-z and A-Z)</td>
+            </tr>
+            
+            <!-- Date of Birth -->
+            <tr>
+                <td>DATE OF BIRTH</td>
+                <td>
+                    <select name="day">
+                        <option value="">Day:</option>
+                        <script>
+                            for(let i = 1; i <= 31; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                    <select name="month">
+                        <option value="">Month:</option>
+                        <option>January</option><option>February</option><option>March</option>
+                        <option>April</option><option>May</option><option>June</option>
+                        <option>July</option><option>August</option><option>September</option>
+                        <option>October</option><option>November</option><option>December</option>
+                    </select>
+                    <select name="year">
+                        <option value="">Year:</option>
+                        <script>
+                            for(let i = 1950; i <= new Date().getFullYear(); i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- Email -->
+            <tr>
+                <td>EMAIL ID</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+
+            <!-- Mobile Number -->
+            <tr>
+                <td>MOBILE NUMBER</td>
+                <td><input type="text" name="mobile" maxlength="10">
+                (10 digit number)</td>
+            </tr>
+
+            <!-- Gender -->
+            <tr>
+                <td>GENDER</td>
+                <td>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                </td>
+            </tr>
+
+            <!-- Address -->
+            <tr>
+                <td>ADDRESS</td>
+                <td><textarea name="address" rows="4" cols="30"></textarea></td>
+            </tr>
+
+            <!-- City -->
+            <tr>
+                <td>CITY</td>
+                <td><input type="text" name="city" maxlength="30">
+                (max 30 characters a-z and A-Z)</td>
+            </tr>
+
+            <!-- PIN Code -->
+            <tr>
+                <td>PIN CODE</td>
+                <td><input type="text" name="pincode" maxlength="6">
+                (6 digit number)</td>
+            </tr>
+
+            <!-- State -->
+            <tr>
+                <td>STATE</td>
+                <td><input type="text" name="state" maxlength="30">
+                (max 30 characters a-z and A-Z)</td>
+            </tr>
+
+            <!-- Country -->
+            <tr>
+                <td>COUNTRY</td>
+                <td><input type="text" name="country" value="India" readonly></td>
+            </tr>
+
+            <!-- Hobbies -->
+            <tr>
+                <td>HOBBIES</td>
+                <td>
+                    <input type="checkbox" name="hobby"> Coding
+                    <input type="checkbox" name="hobby"> Blog-Writing
+                    <input type="checkbox" name="hobby"> Hacking
+                    <input type="checkbox" name="hobby"> Cricket
+                    <input type="checkbox" name="hobby"> Others <input type="text" name="other_hobby">
+                </td>
+            </tr>
+
+            <!-- Qualification -->
+            <tr>
+                <td colspan="3"><strong>QUALIFICATION</strong></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <table border="1" cellpadding="5" cellspacing="0">
+                        <tr>
+                            <th>Sl.No.</th>
+                            <th>Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year of Passing</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Class X</td>
+                            <td><input type="text" name="board_x" maxlength="10"></td>
+                            <td><input type="text" name="percentage_x" maxlength="5"></td>
+                            <td><input type="text" name="year_x" maxlength="4"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Class XII</td>
+                            <td><input type="text" name="board_xii" maxlength="10"></td>
+                            <td><input type="text" name="percentage_xii" maxlength="5"></td>
+                            <td><input type="text" name="year_xii" maxlength="4"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Graduation</td>
+                            <td><input type="text" name="board_grad" maxlength="10"></td>
+                            <td><input type="text" name="percentage_grad" maxlength="5"></td>
+                            <td><input type="text" name="year_grad" maxlength="4"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Masters</td>
+                            <td><input type="text" name="board_master" maxlength="10"></td>
+                            <td><input type="text" name="percentage_master" maxlength="5"></td>
+                            <td><input type="text" name="year_master" maxlength="4"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Courses Applied For -->
+            <tr>
+                <td>COURSES APPLIED FOR</td>
+                <td>
+                    <input type="radio" name="course" value="B.Tech"> B.Tech
+                    <input type="radio" name="course" value="M.Tech"> M.Tech
+                    <input type="radio" name="course" value="PhD"> PhD
+                    <input type="radio" name="course" value="MS"> MS
+                </td>
+            </tr>
+
+            <!-- Submit and Reset -->
+            <tr>
+                <td colspan="3" align="center">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
